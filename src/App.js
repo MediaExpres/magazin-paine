@@ -4,28 +4,28 @@ const App = () => {
   const categories = [
     {
       id: 1,
-      title: 'hats',
-      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png'
+      title: 'Paine',
+      imageUrl: 'https://mediaexpres.ro/magazin/paine.png'
     },
     {
       id: 2,
-      title: 'jackets',
-      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png'
+      title: 'Cozonac',
+      imageUrl: 'https://mediaexpres.ro/magazin/cozonac.png'
     },
     {
       id: 3,
-      title: 'sneakers',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png'
+      title: 'Covrigi',
+      imageUrl: 'https://mediaexpres.ro/magazin/covrigi.png'
     },
     {
       id: 4,
-      title: 'womens',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png'
+      title: 'Cornulete',
+      imageUrl: 'https://mediaexpres.ro/magazin/cornulete.png'
     },
     {
       id: 5,
-      title: 'mens',
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png'
+      title: 'Diverse',
+      imageUrl: 'https://mediaexpres.ro/magazin/tarate.png'
     },
   ]
 
