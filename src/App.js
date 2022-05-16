@@ -1,38 +1,24 @@
-import Directory  from './components/directory/directory.component';
+import { Routes, Route } from 'react-router-dom';
+ import Home from './routes/home/home.component';
+import Navigation from './routes/navigation/navigation.component';
+import SignIn from './routes/signin/signin.component'; 
 
-const App = () => {
-  const categories = [
-    {
-      id: 1,
-      title: 'Paine',
-      imageUrl: 'https://mediaexpres.ro/magazin/paine.png'
-    },
-    {
-      id: 2,
-      title: 'Cozonac',
-      imageUrl: 'https://mediaexpres.ro/magazin/cozonac.png'
-    },
-    {
-      id: 3,
-      title: 'Covrigi',
-      imageUrl: 'https://mediaexpres.ro/magazin/covrigi.png'
-    },
-    {
-      id: 4,
-      title: 'Cornulete',
-      imageUrl: 'https://mediaexpres.ro/magazin/cornulete.png'
-    },
-    {
-      id: 5,
-      title: 'Diverse',
-      imageUrl: 'https://mediaexpres.ro/magazin/tarate.png'
-    },
-  ]
 
-  return (
-    <Directory categories={categories} />
-  
-  );
+const Shop = () => {
+    return (<h1>Pagina de cumparaturi</h1>
+    )
+};
+
+const App = () => { 
+    return (
+        <Routes>
+            <Route path='/' element={<Navigation />}> 
+                <Route index element={<Home />} />
+                <Route path='shop' element={<Shop />} />
+                <Route path='SignIn' element={<SignIn />} />
+            </Route>
+        </Routes>
+        );
 };
 
 export default App;
