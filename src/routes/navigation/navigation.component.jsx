@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link } from 'react-router-dom';
 
 import { ReactComponent as BrutariaLogo } from '../../assets/logo-bcumaya.svg';
 
@@ -23,7 +23,7 @@ const Navigation = () => {
             </div>
             <Outlet />
         </Fragment>
-    )
-}
+    );
+};
 
-export default Navigation
+export default Navigation;
