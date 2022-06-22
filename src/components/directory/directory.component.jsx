@@ -5,7 +5,7 @@ import { DirectoryContainer } from './directory.styles';
 const categories = [
   {
     id: 1,
-    title: 'Paine',
+    title: 'Pâine',
     imageUrl: 'https://mediaexpres.ro/magazin/paine.png',
     route: 'shop/pâine'
   },
@@ -25,7 +25,7 @@ const categories = [
     id: 4,
     title: 'Cornulețe',
     imageUrl: 'https://mediaexpres.ro/magazin/cornulete.png',
-    route: 'shop/cornulete'
+    route: 'shop/cornulețe'
   },
   {
     id: 5,

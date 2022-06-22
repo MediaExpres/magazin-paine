@@ -1,8 +1,8 @@
 import { UserContext } from '../../contexts/user.context';
 import { Fragment, useContext } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
-import { ReactComponent as BrutariaLogo } from '../../assets/logo-bcumaya.svg';
+import { ReactComponent as BrutariaLogo } from '../../assets/logo-forni-mic 80.svg';
 
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
