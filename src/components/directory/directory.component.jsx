@@ -7,13 +7,13 @@ const categories = [
     id: 1,
     title: 'Paine',
     imageUrl: 'https://mediaexpres.ro/magazin/paine.png',
-    route: 'shop/paine'
+    route: 'shop/pâine'
   },
   {
     id: 2,
-    title: 'Cozonac',
+    title: 'Cozonaci',
     imageUrl: 'https://mediaexpres.ro/magazin/cozonac.png',
-    route: 'shop/paine'
+    route: 'shop/cozonaci'
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const categories = [
   },
   {
     id: 4,
-    title: 'Cornulete',
+    title: 'Cornulețe',
     imageUrl: 'https://mediaexpres.ro/magazin/cornulete.png',
     route: 'shop/cornulete'
   },
