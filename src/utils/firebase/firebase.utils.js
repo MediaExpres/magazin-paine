@@ -9,7 +9,16 @@ import {
     signOut,
     onAuthStateChanged,
     } from 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+import {
+    getFirestore,
+    doc,
+    getDoc,
+    getDocs,
+    setDoc,
+    collection,
+    writeBatch,
+    query,
+} from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyD0RtuFCqpv_EFi9YWxZAq-DcRdR3jz-e4",
@@ -35,6 +44,38 @@ export const signInWithGoogleRedirect = () =>
     signInWithRedirect(auth, googleProvider);
 
 export const db = getFirestore();
+
+// de aici incepe add lista de produse in serer
+export const addCollectionAndDocuments = async (
+    collectionKey,
+    objectsToAdd,
+) => {
+    const collectionRef = collection(db, collectionKey);
+    const batch = writeBatch(db);
+
+    objectsToAdd.forEach((object) => {
+        const docRef = doc(collectionRef, object.title.toLowerCase());
+        batch.set(docRef, object);
+    });
+
+    await batch.commit();
+    console.log('done');
+};
+// aici end motor add lista de produse in serer
+
+export const getCategoriesAndDocuments = async () => {
+    const collectionRef = collection(db, 'categories');
+    const q = query(collectionRef);
+
+    const querrySnapshot = await getDocs(q);
+    const categoryMap = querrySnapshot.docs.reduce((acc, docSnapshot) => {
+        const { title, items } = docSnapshot.data();
+        acc[title.toLowerCase()] = items;
+        return acc;
+    }, {});
+
+    return categoryMap;
+};
 
 export const createUserDocumentFromAuth = async (
     userAuth,
@@ -79,6 +120,5 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
   
 export const signOutUser = async () => await signOut(auth);
 
-export const onAuthStateChangedListener = (callback) => {
+export const onAuthStateChangedListener = (callback) =>
     onAuthStateChanged(auth, callback);
-}
