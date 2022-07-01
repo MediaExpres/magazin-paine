@@ -25,7 +25,7 @@ const categories = [
     id: 4,
     title: 'Cornulețe',
     imageUrl: 'https://mediaexpres.ro/magazin/cornulete.png',
-    route: 'shop/cornulețe'
+    route: 'shop/cornulete'
   },
   {
     id: 5,
